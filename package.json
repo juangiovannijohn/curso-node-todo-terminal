@@ -1,0 +1,22 @@
+{
+  "name": "curso-node-todo-terminal",
+  "version": "0.0.1",
+  "description": "Programa de lista de tareas para linea de comandos",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/juangiovannijohn/curso-node-todo-terminal.git"
+  },
+  "author": "Juan Rodriguez",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/juangiovannijohn/curso-node-todo-terminal/issues"
+  },
+  "homepage": "https://github.com/juangiovannijohn/curso-node-todo-terminal#readme",
+  "dependencies": {
+    "colors": "^1.4.0"
+  }
+}
