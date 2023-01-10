@@ -19,6 +19,7 @@
   "homepage": "https://github.com/juangiovannijohn/curso-node-todo-terminal#readme",
   "dependencies": {
     "colors": "^1.4.0",
-    "inquirer": "^9.1.4"
+    "inquirer": "^9.1.4",
+    "uuid": "^9.0.0"
   }
 }
