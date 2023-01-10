@@ -1,7 +1,6 @@
 import colors from 'colors';// para colorear los string en consola
 
-import { inquirerMenu, pausa } from './helpers/inquirer.js';
-import { Tarea } from './models/tarea.js';
+import { inquirerMenu, pausa, leerInput } from './helpers/inquirer.js';
 import { Tareas } from  './models/tareas.js';
 
 
@@ -17,10 +16,11 @@ const main = async() =>{
 
       switch (opt) {
         case '1':
-          tareas.crearTarea('hola');
-          
+         const descripcion = await leerInput('Descripción: ');
+          tareas.crearTarea(descripcion);
         break;
         case '2':
+          console.log(tareas._listado)
           
         break;
         case '3':

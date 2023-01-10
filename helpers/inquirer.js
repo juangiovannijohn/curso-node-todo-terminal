@@ -65,19 +65,20 @@ const leerInput = async( message )=>{
             name: 'desc',
             message,
             validate( value){
-                if (this.validate.length === 0) {
+                if (value.length === 0) {
                     return 'Por favor ingrese un valor.'
                 }
                 return true
             }
         }
     ]
-    const algo = await inquirer.prompt(question);
+    const {desc} = await inquirer.prompt(question);
+    return desc;
 }
 
 
 export {
     inquirerMenu,
     pausa,
-    leerInput
-};
+    leerInput,
+}

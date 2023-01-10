@@ -1,4 +1,4 @@
-import { Tarea } from "./tarea"
+import { Tarea } from  '../models/tarea.js';
 
 class Tareas {
     _listado = {}
