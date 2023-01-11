@@ -2,6 +2,7 @@ import colors from 'colors';// para colorear los string en consola
 
 import { inquirerMenu, pausa, leerInput } from './helpers/inquirer.js';
 import { Tareas } from  './models/tareas.js';
+import { guardarDB} from './helpers/guardarArchivo.js'
 
 
 
@@ -20,7 +21,7 @@ const main = async() =>{
           tareas.crearTarea(descripcion);
         break;
         case '2':
-          console.log(tareas._listado)
+          console.log(tareas.listadoArr)
           
         break;
         case '3':
@@ -36,7 +37,8 @@ const main = async() =>{
           
         break;
       }
-
+      //Guarda info en el archivo
+      guardarDB(JSON.stringify(tareas.listadoArr));
       await pausa();
 
     } while (opt !== '0');
