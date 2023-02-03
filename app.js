@@ -12,11 +12,11 @@ const main = async() =>{
 
     let opt = '';
     const tareas =  new Tareas();
-const tareasDB = leerDB();
-if (tareasDB) {
-  //establecer las tareas
-}
-await pausa();
+    //lee las tareas
+    const tareasDB = leerDB();
+    if (tareasDB) {
+      tareas.cargarTareasFromArray(tareasDB);
+    }
 
     do {
       opt =  await inquirerMenu();
@@ -27,7 +27,7 @@ await pausa();
           tareas.crearTarea(descripcion);
         break;
         case '2':
-          console.log(tareas.listadoArr)
+          tareas.listadoCompleto();
           
         break;
         case '3':

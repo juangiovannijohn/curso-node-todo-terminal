@@ -8,9 +8,11 @@ const guardarDB = (data) => {
 const leerDB = () => {
     if ( !fs.existsSync(path)) {
         return null;
-    }
+    }else{
     const info = fs.readFileSync(path, {encoding: 'utf-8'});
-    console.log(info)
+    const data = JSON.parse(info)
+    return data;
+    }
 }
 
 
